@@ -35,17 +35,21 @@ function csvParaJson(csv) { //Converte o formato original da planilha para json
 
 function carregarPlantas() {
     const planilhaPlantas = '../dados/planilhaFitopedia.csv'
-    
-    fetch(planilhaPlantas) //Solicitação para recuperar dados do servidor
-        .then(resposta => resposta.text()) // CSV para texto
+
+    return fetch(planilhaPlantas)
+        .then(resposta => resposta.text())
         .then(csv => {
-            const plantas = csvParaJson(csv); // Converte CSV para JSON
+            const plantas = csvParaJson(csv)
+
             console.log("Plantas carregadas da planilha:", plantas)
 
             localStorage.setItem('plantas', JSON.stringify(plantas))
+
+            return plantas
         })
         .catch(error => {
             console.error("Erro ao carregar plantas:", error)
+            throw error
         })
 }
 

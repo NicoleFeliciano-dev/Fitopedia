@@ -8,9 +8,16 @@ const lupa = barraDePesquisa.querySelector("button")
 console.log(barra)
 
 document.addEventListener("DOMContentLoaded", function () {
-    carregarPlantas()
-    const PLANTAS = JSON.parse(localStorage.getItem('plantas'))
-    gerarCarroselRecomendacoes(PLANTAS)
+    const dadosSalvos = localStorage.getItem('plantas')
+
+    if (dadosSalvos) {
+        const PLANTAS = JSON.parse(dadosSalvos)
+        gerarCarroselRecomendacoes(PLANTAS)
+    } else {
+        carregarPlantas().then(PLANTAS => {
+            gerarCarroselRecomendacoes(PLANTAS)
+        })
+    }
 })
 
 barra.addEventListener("keyup", function(valor){
