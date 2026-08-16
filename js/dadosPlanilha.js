@@ -43,7 +43,6 @@ function carregarPlantas() {
             console.log("Plantas carregadas da planilha:", plantas)
 
             localStorage.setItem('plantas', JSON.stringify(plantas))
-            
         })
         .catch(error => {
             console.error("Erro ao carregar plantas:", error)

@@ -8,9 +8,9 @@ const lupa = barraDePesquisa.querySelector("button")
 console.log(barra)
 
 document.addEventListener("DOMContentLoaded", function () {
+    carregarPlantas()
     const PLANTAS = JSON.parse(localStorage.getItem('plantas'))
     gerarCarroselRecomendacoes(PLANTAS)
-    carregarPlantas()
 })
 
 barra.addEventListener("keyup", function(valor){
@@ -256,9 +256,6 @@ var voltarButton = document.querySelector("#voltar-pagina")
 voltarButton.addEventListener('click',function(){
     ocultarInformacoes()
 })
-
-
-
 
 //Palavras chaves para encontrar as plantas de cada categoria
 const ACAO_GASTROINTESTINAL_PC = ["Ação Gastrointestinal",'intestinal','intestivo','gastrointestinal','gastrointestinais','flatulência','dispéptico']

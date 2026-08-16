@@ -1,4 +1,4 @@
-# 🌿 Fitopedia
+![Banner Projeto](imgs/banner-fitopedia.png)
 
 > Autoras: Gabrielly Araújo, Iara Garcia e Nicole Feliciano
 
