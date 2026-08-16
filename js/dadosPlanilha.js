@@ -34,7 +34,7 @@ function csvParaJson(csv) { //Converte o formato original da planilha para json
 } 
 
 function carregarPlantas() {
-    const planilhaPlantas = '../dados/planilhaFitopedia.csv'
+    const planilhaPlantas = 'dados/planilhaFitopedia.csv'
 
     return fetch(planilhaPlantas)
         .then(resposta => resposta.text())
