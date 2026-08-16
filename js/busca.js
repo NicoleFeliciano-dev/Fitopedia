@@ -9,6 +9,7 @@ console.log(barra)
 
 document.addEventListener("DOMContentLoaded", function () {
     const dadosSalvos = localStorage.getItem('plantas')
+    console.log(dadosSalvos)
 
     if (dadosSalvos) {
         const PLANTAS = JSON.parse(dadosSalvos)

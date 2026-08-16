@@ -53,4 +53,5 @@ function carregarPlantas() {
         })
 }
 
+carregarPlantas()
 export default carregarPlantas;
